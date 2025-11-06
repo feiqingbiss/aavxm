@@ -1,4 +1,4 @@
-import { connect } from "cloudflare:sockets";
+﻿import { connect } from "cloudflare:sockets";
 let config_JSON, 反代IP = '', 启用SOCKS5反代 = null, 启用SOCKS5全局反代 = false, 我的SOCKS5账号 = '', parsedSocks5Address = {};
 let SOCKS5白名单 = ['*tapecontent.net', '*cloudatacdn.com', '*loadshare.org', '*cdn-centaurus.com', 'scholar.google.com'];
 const Pages静态页面 = 'https://edt-pages.github.io';
@@ -1024,7 +1024,7 @@ async function 请求优选API(urls, 默认端口 = '443', 超时时间 = 3000) 
                 for (const dec of decoders) {
                     try {
                         text = new TextDecoder(dec).decode(buffer);
-                        if (dec === 'utf-8' && (text.includes(' ') || (text.length > 0 && /[\x80-\xFF]/.test(text) && !text.includes('中')))) continue;
+                        if (dec === 'utf-8' && (text.includes('�') || (text.length > 0 && /[\x80-\xFF]/.test(text) && !text.includes('中')))) continue;
                         break;
                     } catch { }
                 }
